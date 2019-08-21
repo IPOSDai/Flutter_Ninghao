@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../models/model_post.dart';
 
+import "../help.dart";
+
 class SliverPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -10,8 +12,15 @@ class SliverPageView extends StatelessWidget {
           SliverAppBar(
 //            title: Text('NINGHAO'),
             pinned: true,
-            floating: true,
+//            floating: true,
             expandedHeight: 178.0,
+            leading: IconButton(
+              icon: Icon(Icons.menu ),
+              onPressed: () {
+                mainScaffoldKey.currentState.openDrawer();
+              },
+            ),
+            automaticallyImplyLeading: false,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
                 'Ninghao Flutter'.toUpperCase(),
