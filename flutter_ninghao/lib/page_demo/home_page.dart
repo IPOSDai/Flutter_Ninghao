@@ -22,12 +22,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           elevation: 0.0,
           title: Text("NINGHAO"),
-          leading: IconButton(
-            icon: Icon(Icons.menu ),
-            onPressed: () {
-              mainScaffoldKey.currentState.openDrawer();
-            },
-          ),
+          leading: MenuIconButton(),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),

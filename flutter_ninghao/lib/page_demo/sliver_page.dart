@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/model_post.dart';
 
 import "../help.dart";
+import '../page_demo/navigator_page.dart';
 
 class SliverPageView extends StatelessWidget {
   @override
@@ -12,14 +13,8 @@ class SliverPageView extends StatelessWidget {
           SliverAppBar(
 //            title: Text('NINGHAO'),
             pinned: true,
-//            floating: true,
             expandedHeight: 178.0,
-            leading: IconButton(
-              icon: Icon(Icons.menu ),
-              onPressed: () {
-                mainScaffoldKey.currentState.openDrawer();
-              },
-            ),
+            leading: MenuIconButton(),
             automaticallyImplyLeading: false,
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
@@ -62,41 +57,48 @@ class SliverListDemo extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.0),
               elevation: 14.0,
               shadowColor: Colors.grey.withOpacity(0.5),
-              child: Stack(
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(posts[index].imageUrl),
-                        fit: BoxFit.cover,
+              child: GestureDetector(
+                child: Stack(
+                  children: <Widget>[
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(posts[index].imageUrl),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       ),
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
                     ),
-                  ),
-                  Positioned(
-                    top: 32.0,
-                    left: 32.0,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          posts[index].title,
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white
+                    Positioned(
+                      top: 32.0,
+                      left: 32.0,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            posts[index].title,
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white
+                            ),
                           ),
-                        ),
-                        Text(
-                          posts[index].author,
-                          style: TextStyle(
-                              fontSize: 13.0,
-                              color: Colors.white
+                          Text(
+                            posts[index].author,
+                            style: TextStyle(
+                                fontSize: 13.0,
+                                color: Colors.white
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
+                onTap: () {
+                  Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+                    return NavigatorPage();
+                  }));
+                },
               ),
             ),
           );
@@ -129,44 +131,51 @@ class SliverGridDemo extends StatelessWidget {
               borderRadius: BorderRadius.circular(12.0),
               elevation: 14.0,
               shadowColor: Colors.grey.withOpacity(0.5),
-              child: Stack(
-                children: <Widget>[
+              child: GestureDetector(
+                child: Stack(
+                  children: <Widget>[
 
-                  Container(
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: NetworkImage(posts[index].imageUrl),
-                        fit: BoxFit.cover,
+                    Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: NetworkImage(posts[index].imageUrl),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(12.0)),
                       ),
-                      borderRadius: BorderRadius.all(Radius.circular(12.0)),
                     ),
-                  ),
 
-                  Positioned(
-                    top: 32.0,
-                    left: 32.0,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          posts[index].title,
-                          style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white
+                    Positioned(
+                      top: 32.0,
+                      left: 32.0,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            posts[index].title,
+                            style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white
+                            ),
                           ),
-                        ),
-                        Text(
-                          posts[index].author,
-                          style: TextStyle(
-                              fontSize: 13.0,
-                              color: Colors.white
+                          Text(
+                            posts[index].author,
+                            style: TextStyle(
+                                fontSize: 13.0,
+                                color: Colors.white
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
 
-                ],
+                  ],
+                ),
+                onTap: () {
+                  Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+                    return NavigatorPage();
+                  }));
+                },
               ),
             ),
           );

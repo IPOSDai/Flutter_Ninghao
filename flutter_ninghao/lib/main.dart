@@ -3,6 +3,9 @@ import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './tabbar_controller.dart';
 
+
+import './page_demo/navigator_page.dart';
+
 import './help.dart';
 
 void main() => runApp(ZXXApp());
@@ -22,6 +25,9 @@ class ZXXApp extends StatelessWidget {
         splashColor: Colors.white70,
       ),
       home: Home(),
+      routes: {
+        '/about': (context) => AboutDemoPage(),
+      },
     );
   }
 }
