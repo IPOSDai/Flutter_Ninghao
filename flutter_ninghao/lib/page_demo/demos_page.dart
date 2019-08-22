@@ -3,6 +3,7 @@ import "../help.dart";
 
 import 'form_page.dart';
 import 'buttons_page.dart';
+import 'popupmenu_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -38,6 +39,18 @@ class DemosPage extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context) {
                     return ButtonDemoPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'Popup Menu Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return PopupMenuPage();
                   })
               );
             },

@@ -29,5 +29,22 @@ class _TestPageState extends State<TestPage> {
 }
 
 class AppUtils {
-  static const Color tinColor = Color.fromRGBO(0, 89, 241, 1.0);
+  static const int _tinColorPrimaryValue = 0xff0059f1;
+
+  static const MaterialColor tinColor = MaterialColor(
+    _tinColorPrimaryValue,
+  <int, Color>{
+    50: Color(_tinColorPrimaryValue),
+    100: Color(_tinColorPrimaryValue),
+    200: Color(_tinColorPrimaryValue),
+    300: Color(_tinColorPrimaryValue),
+    400: Color(_tinColorPrimaryValue),
+    500: Color(_tinColorPrimaryValue),
+    600: Color(_tinColorPrimaryValue),
+    700: Color(_tinColorPrimaryValue),
+    800: Color(_tinColorPrimaryValue),
+    900: Color(_tinColorPrimaryValue),
+    },
+  );
 }
+
