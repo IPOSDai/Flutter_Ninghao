@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import "../help.dart";
 
 import 'form_page.dart';
+import 'buttons_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -32,9 +33,13 @@ class DemosPage extends StatelessWidget {
 
           ListViewItem(
             height: 54.0,
-            title: 'Form Input Demo',
+            title: 'Buttons Demo',
             onPressed: () {
-              debugPrint("Form Input Demo");
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return ButtonDemoPage();
+                  })
+              );
             },
           ),
         ],

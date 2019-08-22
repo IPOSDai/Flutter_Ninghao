@@ -27,3 +27,7 @@ class _TestPageState extends State<TestPage> {
     return Container();
   }
 }
+
+class AppUtils {
+  static const Color tinColor = Color.fromRGBO(0, 89, 241, 1.0);
+}

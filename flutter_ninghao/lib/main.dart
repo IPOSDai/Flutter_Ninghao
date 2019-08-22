@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import './demo/listview_demo.dart';
 import './demo/drawer_demo.dart';
 import './tabbar_controller.dart';
-
+import 'package:flutter/services.dart';
 
 import './page_demo/navigator_page.dart';
 
 import './help.dart';
 
-void main() => runApp(ZXXApp());
+void main() {
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(ZXXApp());
+  });
+}
 
 
 class ZXXApp extends StatelessWidget {
@@ -16,6 +22,7 @@ class ZXXApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    FocusScope.of(context).requestFocus(FocusNode());
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
