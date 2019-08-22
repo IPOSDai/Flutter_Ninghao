@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './page_demo/home_page.dart';
 import './page_demo/history_page.dart';
 import './page_demo/sliver_page.dart';
+import './page_demo/demos_page.dart';
 
 class TabbarPage extends StatefulWidget {
 
@@ -16,6 +17,7 @@ class _TabbarPageState extends State<TabbarPage> {
   HomePage _homePage;
   HistoryPage _historyPage;
   SliverPageView _sliverPage;
+  DemosPage _demosPage;
 
 
   _getBoddy() {
@@ -38,7 +40,11 @@ class _TabbarPageState extends State<TabbarPage> {
         }
         return _historyPage;
 
-
+      case 3:
+        if (_demosPage == null) {
+          _demosPage = DemosPage();
+        }
+        return _demosPage;
       default:
         return null;
     }
@@ -50,6 +56,11 @@ class _TabbarPageState extends State<TabbarPage> {
       body: _getBoddy(),
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        showUnselectedLabels: true,
+        selectedFontSize: 12.0,
+        unselectedFontSize: 12.0,
+        type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -63,6 +74,11 @@ class _TabbarPageState extends State<TabbarPage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
             title: Text("History"),
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.more_horiz),
+            title: Text("Demos"),
           ),
 
         ],
