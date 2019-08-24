@@ -6,6 +6,8 @@ import 'package:flutter_ninghao/page_demo/widget_demo/buttons_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/popupmenu_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/input_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/dialog_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/mdc_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/data_table_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -81,6 +83,36 @@ class DemosPage extends StatelessWidget {
               );
             },
           ),
+
+          Container(
+            color: Colors.transparent,
+            height: 20.0,
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'MDC Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return MDCDemoPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'MDC DataTable Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return DataTableDemoPage();
+                  })
+              );
+            },
+          ),
+
         ],
       ),
     );
