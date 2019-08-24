@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import "../help.dart";
 
-import 'form_page.dart';
-import 'buttons_page.dart';
-import 'popupmenu_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/form_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/buttons_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/popupmenu_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/input_page.dart';
+import 'package:flutter_ninghao/page_demo/widget_demo/dialog_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -51,6 +53,30 @@ class DemosPage extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context) {
                     return PopupMenuPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'Input Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return InputDemoPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'Dialog Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return DialogDemoPage();
                   })
               );
             },
