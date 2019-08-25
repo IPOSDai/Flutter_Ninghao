@@ -9,6 +9,10 @@ import 'package:flutter_ninghao/page_demo/widget_demo/dialog_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/mdc_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/data_table_page.dart';
 
+import 'package:flutter_ninghao/page_demo/widget_demo/state_manage_page.dart';
+
+
+
 import '../widges/listview_item.dart';
 
 
@@ -108,6 +112,18 @@ class DemosPage extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context) {
                     return DataTableDemoPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'StateManage Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return StateManageDemoPage();
                   })
               );
             },
