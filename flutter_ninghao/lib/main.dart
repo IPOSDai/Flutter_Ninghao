@@ -7,6 +7,8 @@ import 'package:flutter/services.dart';
 import './page_demo/navigator_page.dart';
 
 import './help.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_ninghao/locale_supports/local_utils.dart';
 
 void main() {
 
@@ -25,6 +27,20 @@ class ZXXApp extends StatelessWidget {
     FocusScope.of(context).requestFocus(FocusNode());
     // TODO: implement build
     return MaterialApp(
+//      locale: Locale('en', "US"),
+      locale: Locale('zh', "CN"),
+//      localeResolutionCallback: (Locale locale, Iterable<Locale> supports) {
+//        return Locale('en', "US");
+//      },
+      localizationsDelegates: [
+        LocaleDemoDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', 'US'),
+        Locale('zh', 'CN'),
+      ],
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: AppUtils.tinColor,

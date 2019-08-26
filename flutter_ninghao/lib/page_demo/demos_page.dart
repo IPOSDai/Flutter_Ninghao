@@ -16,6 +16,7 @@ import 'package:flutter_ninghao/rxdart_demo/rxdart_page.dart';
 import 'package:flutter_ninghao/page_demo/bloc_page.dart';
 import 'package:flutter_ninghao/page_demo/http_page.dart';
 import 'package:flutter_ninghao/page_demo/animation_page.dart';
+import 'package:flutter_ninghao/page_demo/i18n_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -181,6 +182,18 @@ class DemosPage extends StatelessWidget {
               Navigator.of(context).push(
                   MaterialPageRoute(builder: (BuildContext context) {
                     return AnimationDemoPage();
+                  })
+              );
+            },
+          ),
+
+          ListViewItem(
+            height: 54.0,
+            title: 'i18n Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return I18nDemoPage();
                   })
               );
             },
