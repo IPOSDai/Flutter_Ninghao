@@ -11,7 +11,7 @@ import 'package:flutter_ninghao/page_demo/widget_demo/data_table_page.dart';
 
 import 'package:flutter_ninghao/page_demo/widget_demo/state_manage_page.dart';
 import 'package:flutter_ninghao/page_demo/widget_demo/stream_page.dart';
-
+import 'package:flutter_ninghao/rxdart_demo/rxdart_page.dart';
 
 import '../widges/listview_item.dart';
 
@@ -141,6 +141,17 @@ class DemosPage extends StatelessWidget {
             },
           ),
 
+          ListViewItem(
+            height: 54.0,
+            title: 'RxDart Demo',
+            onPressed: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (BuildContext context) {
+                    return RxDartDemoPage();
+                  })
+              );
+            },
+          ),
         ],
       ),
     );
