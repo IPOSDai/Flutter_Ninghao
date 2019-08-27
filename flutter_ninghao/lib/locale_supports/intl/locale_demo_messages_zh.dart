@@ -25,6 +25,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
     "greet" : m0,
+    "tabbar_demos" : MessageLookupByLibrary.simpleMessage("示例"),
+    "tabbar_explore" : MessageLookupByLibrary.simpleMessage("发现"),
+    "tabbar_history" : MessageLookupByLibrary.simpleMessage("历史"),
+    "tabbar_home" : MessageLookupByLibrary.simpleMessage("首页"),
     "title" : MessageLookupByLibrary.simpleMessage("您好")
   };
 }

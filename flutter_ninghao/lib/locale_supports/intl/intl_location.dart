@@ -19,20 +19,20 @@ class IntlDemoLocalizations {
 
   String get tabbar_explore => Intl.message(
     'Explore',
-    name: 'tabbar_home',
-    desc: 'tabbar home',
+    name: 'tabbar_explore',
+    desc: 'tabbar explore',
   );
 
-  String get tabbar_home => Intl.message(
-    'Home',
-    name: 'tabbar_home',
-    desc: 'tabbar home',
+  String get tabbar_history => Intl.message(
+    'History',
+    name: 'tabbar_history',
+    desc: 'tabbar history',
   );
 
-  String get tabbar_home => Intl.message(
-    'Home',
-    name: 'tabbar_home',
-    desc: 'tabbar home',
+  String get tabbar_demos => Intl.message(
+    'Demos',
+    name: 'tabbar_demos',
+    desc: 'tabbar demos',
   );
 
 
@@ -87,3 +87,7 @@ class IntlDemoLocalizationsDelegate extends LocalizationsDelegate<IntlDemoLocali
     return false;
   }
 }
+
+// flutter pub pub run intl_translation:extract_to_arb --output-dir=lib/locale_supports/intl lib/locale_supports/intl/intl_location.dart
+
+// flutter pub pub run intl_translation:generate_from_arb --generated-file-prefix=locale_demo_ --output-dir=lib/locale_supports/intl/ --no-use-deferred-loading lib/locale_supports/intl/intl_location.dart lib/locale_supports/intl/intl_*.arb

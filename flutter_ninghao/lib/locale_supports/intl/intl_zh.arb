@@ -1,11 +1,38 @@
 {
-  "@@last_modified": "2019-08-26T18:50:26.653305",
+  "@@last_modified": "2019-08-27T10:48:07.604074",
+
   "title": "您好",
   "@title": {
     "description": "本地化演示",
     "type": "text",
     "placeholders": {}
   },
+
+  "tabbar_home": "首页",
+  "@tabbar_home": {
+    "description": "tabbar 首页",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_explore": "发现",
+  "@tabbar_explore": {
+    "description": "tabbar 发现",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_history": "历史",
+  "@tabbar_history": {
+    "description": "tabbar 历史",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_demos": "示例",
+  "@tabbar_demos": {
+    "description": "tabbar 示例",
+    "type": "text",
+    "placeholders": {}
+  },
+
   "greet": "您好 {name}",
   "@greet": {
     "description": "问候某人",
@@ -14,4 +41,5 @@
       "name": {}
     }
   }
+
 }

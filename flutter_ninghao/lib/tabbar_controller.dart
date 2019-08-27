@@ -4,6 +4,8 @@ import './page_demo/history_page.dart';
 import './page_demo/sliver_page.dart';
 import './page_demo/demos_page.dart';
 
+import 'package:flutter_ninghao/locale_supports/intl/intl_location.dart';
+
 class TabbarPage extends StatefulWidget {
 
   @override
@@ -64,21 +66,21 @@ class _TabbarPageState extends State<TabbarPage> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("Home"),
+            title: Text(IntlDemoLocalizations.of(context).tabbar_home),
           ),
 
           BottomNavigationBarItem(
             icon: Icon(Icons.explore),
-            title: Text("Explore"),
+            title: Text(IntlDemoLocalizations.of(context).tabbar_explore),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
-            title: Text("History"),
+            title: Text(IntlDemoLocalizations.of(context).tabbar_history),
           ),
 
           BottomNavigationBarItem(
             icon: Icon(Icons.more_horiz),
-            title: Text("Demos"),
+            title: Text(IntlDemoLocalizations.of(context).tabbar_demos),
           ),
 
         ],

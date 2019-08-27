@@ -1,11 +1,37 @@
 {
-  "@@last_modified": "2019-08-26T18:50:26.653305",
+  "@@last_modified": "2019-08-27T10:48:07.604074",
   "title": "hello",
   "@title": {
     "description": "demo localizations",
     "type": "text",
     "placeholders": {}
   },
+
+  "tabbar_home": "Home",
+  "@tabbar_home": {
+    "description": "tabbar home",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_explore": "Explore",
+  "@tabbar_explore": {
+    "description": "tabbar explore",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_history": "History",
+  "@tabbar_history": {
+    "description": "tabbar history",
+    "type": "text",
+    "placeholders": {}
+  },
+  "tabbar_demos": "Demos",
+  "@tabbar_demos": {
+    "description": "tabbar demos",
+    "type": "text",
+    "placeholders": {}
+  },
+
   "greet": "hello {name}",
   "@greet": {
     "description": "greet someone.",
@@ -14,4 +40,5 @@
       "name": {}
     }
   }
+
 }

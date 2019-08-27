@@ -28,8 +28,8 @@ class ZXXApp extends StatelessWidget {
     FocusScope.of(context).requestFocus(FocusNode());
     // TODO: implement build
     return MaterialApp(
-      locale: Locale('en', "US"),
-//      locale: Locale('zh', "CN"),
+//      locale: Locale('en', "US"),
+      locale: Locale('zh', "CN"),
 //      localeResolutionCallback: (Locale locale, Iterable<Locale> supports) {
 //        return Locale('en', "US");
 //      },
